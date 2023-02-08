@@ -2,6 +2,8 @@ from flask import Flask, jsonify
 import os
 
 app = Flask(__name__)
+app.config.from_object(__name__)
+app.config["JSON_AS_ASCII"] = False
 
 
 @app.route('/')
